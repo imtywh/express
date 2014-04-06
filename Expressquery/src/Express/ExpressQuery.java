@@ -61,30 +61,6 @@ public class ExpressQuery extends JFrame {
 		});
 	}
 
-	public static String readTxt() {
-		String filePath = "E:\\zm\\1.txt"; // 文件和该类在同个目录下
-		BufferedReader reader = null;
-		String str = null;
-		try {
-			reader = new BufferedReader(new InputStreamReader(
-					new FileInputStream(filePath), "UTF-8")); // 指定读取文件的编码格式，要和写入的格式一致，以免出现中文乱码,
-
-			while ((str = reader.readLine()) != null) {
-				a = a + str;
-			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				reader.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		return a;
-	}
 
 	/**
 	 * Create the frame.
